@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <title>Clase 5</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{texto}}</h2>
+        <table class="table table-dark">       
+           <componente-tabla1 :estilo="estilo1" v-for="(tdatos,index) in tabla" :key="index" :nombre="tdatos.nombre" :usuario="tdatos.usuario" :email="tdatos.email"></componente-tabla1><br>
+        </table>
+           <componente-tabla2 :estilo="estilo2" v-for="(tdatos,index) in tabla" :key="index" :apellido="tdatos.apellido" :materia="tdatos.materia" :nota="tdatos.nota"></componente-tabla2><br>
+           <componente-tabla3 :estilo="estilo3" v-for="(tdatos,index) in tabla" :key="index" :nombre="tdatos.nombre" :apellido="tdatos.apellido" :direccion="tdatos.direccion"></componente-tabla3><br>       
+    </div>
+    <!-- cdn de bootstrap y vue -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="componente-tabla1.js"></script>
+    <script src="componente-tabla2.js"></script>
+    <script src="componenete-tabla3.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
